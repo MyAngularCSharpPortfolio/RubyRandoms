@@ -1,0 +1,12 @@
+def subset(arr)
+
+array_per = []
+(0..arr.length).each do |x|
+array_per << (arr.permutation(x).to_a.sort.uniq)
+end
+puts "#{array_per.sort.uniq}"
+end
+
+
+subset(["a", "b", "c"])
+

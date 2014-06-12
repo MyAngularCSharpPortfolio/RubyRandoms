@@ -1,0 +1,28 @@
+def word_unscrambler(str, words)
+
+str_sorted = str.downcase.sort
+anagrams = []
+
+words.each { |x|
+
+if str_sorted.length == x.length and str_sorted == x.downcase.sort
+anagrams << x
+end
+
+}
+
+return anagrams
+
+
+end
+
+def string_sort(str)
+arr = []
+
+str.split(%r{\s*}).each { |x| arr << x }
+
+
+return arr.sort.join
+
+
+end

@@ -1,0 +1,20 @@
+def rps(str)
+hash_RPS = {:rock => 0, :paper => 1, :scissors => 2}
+rand_RPS = hash_RPS.key(rand(0..2)).to_s
+
+if rand_RPS == str
+puts "#{rand_RPS} Tie"
+
+elsif (rand_RPS == "rock" && str == "paper" ) ||
+(rand_RPS == "paper" && str == "scissors" ) ||
+(rand_RPS == "scissors" && str == "rock" )
+puts "#{rand_RPS}, You win"
+
+else
+puts "#{rand_RPS}, you lose"
+
+end
+
+end
+
+rps("scissors")

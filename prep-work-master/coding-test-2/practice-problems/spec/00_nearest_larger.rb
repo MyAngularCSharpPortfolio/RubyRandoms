@@ -1,0 +1,12 @@
+def nearest_larger(arr, i)
+
+arr.each_with_index {|value, index|
+
+if arr[i] < value
+return index
+elsif arr[i] >= arr.max
+return nil
+end
+
+}
+end

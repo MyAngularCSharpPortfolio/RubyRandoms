@@ -1,0 +1,43 @@
+def echo(str)
+str
+end
+
+def shout(str)
+str.upcase
+end
+
+def repeat(str, num = 2)
+repeat = ""
+(0...num).each{|x| repeat += " " + str }
+repeat.strip
+end
+
+def start_of_word(str, num)
+repeat = ""
+(0...num).each{|x| repeat += str[x] }
+repeat
+
+end
+
+def first_word(str)
+(str.split)[0]
+end
+
+def titleize(str)
+stringer = ""
+
+str.split.each_with_index{|x, index| 
+
+
+if x == "and" || (x == "the" && index != 0) || x == "the"
+stringer += " " + x
+
+else
+
+stringer += " " + x.capitalize
+end
+}
+
+
+stringer.strip
+end

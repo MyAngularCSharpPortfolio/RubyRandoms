@@ -1,0 +1,24 @@
+def cat_hats(cats)
+   #first round stop at every cat
+   cat_hash = {}
+   (1..100).each {|x| cat_hash[x] = ""}
+   cat_num = 1
+   num = 1
+while num <= 3 do
+   (1..cats).each{|cat|
+    
+    if cat%num == 0
+    cat_num = cat 
+    
+    if cat_hash[cat_num] == ""
+        cat_hash[cat_num] = "hat" 
+    elsif cat_hash[cat_num] == "hat"
+        cat_hash[cat_num] = "" 
+    end
+end
+}
+num += 1
+ end
+   cat_hash 
+end
+puts cat_hats(100)

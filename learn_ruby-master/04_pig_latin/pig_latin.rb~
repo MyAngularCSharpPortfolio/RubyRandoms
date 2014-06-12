@@ -1,0 +1,43 @@
+def translate(stri)
+word = ''
+stri.strip.split.each do |str|
+if consonant?(str[0]) == true
+
+  m = str.match(/\b([^aeiouq]|qu)+/).to_s
+  str[0...m.length] = ''
+  word << str << m << "ay" << " "
+
+else
+  word << str << "ay" << " "
+end
+
+end
+word.strip
+end
+def consonant?(letter)
+(letter =~ /[^aeiou]/) == 0
+end
+=begin
+str_arr = "asd".split(%r{\s*})
+str_arr if
+regex used to take the first consonant groups
+regex used to take the first vowel groups
+if consonant?(str[0]) == true
+  m = str.match(/\b([^aeiou]|qu)+/)
+  m ? m[0] : nil
+else
+m = str.match(/\b([aeiou])+/)
+ m ? m[0] : nil
+end
+str[0..m.length] = ''
+str << (m + "ay")
+
+end
+
+
+
+test to see if its a vowel group or consonant group
+remove the first group of Cs or Vs and attach to end
+
+=end
+

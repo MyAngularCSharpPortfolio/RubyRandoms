@@ -1,0 +1,38 @@
+def swingers(arr)
+random_man = []
+random_number = 0
+used = []
+what_is_left = arr
+count = arr.length - 1
+arr.each {|current_group|
+
+what_is_left -= [current_group]
+#subtract the current group from what groups are left
+
+random_number = rand(0...what_is_left.length)
+#the random number
+
+
+random_man += what_is_left[random_number]
+#puts random_man[0]
+puts "what is left should be something other than Clyde"
+
+what_is_left += [current_group]
+
+what_is_left -= [random_man]
+puts what_is_left
+
+current_group[0] = random_man[0]
+
+random_man.clear
+}
+#puts arr
+return arr
+end
+
+swingers([
+  ["Clyde", "Bonnie"],
+  ["Paris", "Helen"],
+  ["Romeo", "Juliet"],
+  ["Romel", "Juliety"]
+])

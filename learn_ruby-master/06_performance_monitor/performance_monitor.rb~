@@ -1,0 +1,5 @@
+def measure(x = 1)
+a = Time.now
+x.times { yield }
+(Time.now - a)/2
+end
